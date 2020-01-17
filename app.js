@@ -108,7 +108,7 @@ app.post("/", function(req, res) {
   });
 
   if(listName === "Today"){
-    newerItem.save();
+    item.save();
     res.redirect("/");
   } else {
     List.findOne({name: listName}, function(err, foundList){
